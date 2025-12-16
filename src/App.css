@@ -115,7 +115,7 @@ nav ion-icon:first-child:hover {
   color: var(--nav-ion-icon)
 }
 
-.person-outline, .construct-outline, .server-outline, .mail-outline {
+.person-outline, .construct-outline, .server-outline, .mail-outline, .header-outline {
   display: none;
   opacity: 0;
 }
@@ -152,6 +152,10 @@ nav ion-icon:first-child:hover {
 
   animation-range-start: 0;
   animation-range-end: 620px;
+
+  position: relative;
+  width: 80%;
+  left: 10%;
 }
 
 
@@ -276,19 +280,21 @@ li {
 
 
 .section-five {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1em;
-  
   width: 600px;
   margin: 0 auto;
-  margin-bottom: 600px;
+  margin-bottom: 250px;
 
   animation: fade-in linear;
   animation-timeline: view();
   animation-range-start: 0;
   animation-range-end: 600px;
+}
+
+.section-five form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
 }
 
 .section-five h2 {
