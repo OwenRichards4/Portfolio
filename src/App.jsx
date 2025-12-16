@@ -1,5 +1,11 @@
-import { useState, useEffect } from 'react'
-import './App.css'
+import { useState, useEffect } from 'react';
+import './App.css';
+import selfImg from './assets/self-img.jpg';
+import bgImg from './assets/scrolling-background.jpg';
+import liveStreamPlatform from './assets/live-streaming-platform.png'
+import databaseSystem from './assets/client-database.png'
+import financialDash from './assets/financial-dashboard.png'
+import rlStatTracker from './assets/rocket-league-stats-tracker.png'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -107,14 +113,14 @@ function App() {
 
   return (
     <>
-      <img className="scrolling-background" src="src/assets/scrolling-background.jpg"></img>
+      <img className="scrolling-background" src={bgImg}></img>
       <header>
         <h1 id="name">Owen Richards</h1>
         <h4 id="port-text">Software Engineer&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;Full Stack&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;Cloud&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;AI Development</h4>
       </header>
       <main>
         <section className="section-two">
-          <img className="self-photo" src="src/assets/self-img.jpg" alt="photo of Owen Richards"></img>
+          <img className="self-photo" src={selfImg} alt="photo of Owen Richards"></img>
           <div className="about">
             <section className="subheading-flex-1">
               <ion-icon name="person-outline" className="subheading-icon"></ion-icon>
@@ -201,21 +207,21 @@ function App() {
           <div className="websites-grid">
             <a className="container" href="https://owenrichards4.github.io/Live-Streaming-Platform/" target="_blank" rel="noopener noreferrer">
               <h3>Live Streaming Platform</h3>
-              <img src="src\assets\live-streaming-platform.png"></img>
+              <img src={liveStreamPlatform}></img>
             </a>
             <a className="container" href="https://github.com/OwenRichards4/Client-Database" target="_blank" rel="noopener noreferrer">
               <h3>Database System</h3>
-              <img src="src\assets\client-database.png"></img>
+              <img src={databaseSystem}></img>
             </a>
           </div>
           <div className="websites-grid">
             <a className="container" href="https://owenrichards4.github.io/Financial-Dashboard/" target="_blank" rel="noopener noreferrer">
               <h3>Financial Dashboard</h3>
-              <img src="src\assets\financial-dashboard.png"></img>
+              <img src={financialDash}></img>
             </a>
             <a className="container" href="https://owenrichards4.github.io/UI-Project-1/" target="_blank" rel="noopener noreferrer">
               <h3>RL Statistics Tracker</h3>
-              <img src="src\assets\rocket-league-stats-tracker.png"></img>
+              <img src={rlStatTracker}></img>
             </a>
           </div>
         </section>
