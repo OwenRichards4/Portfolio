@@ -13,6 +13,10 @@
 
 html, body {
   margin: 0;
+  padding: 0;
+
+  width: 100%;
+  min-height: 100%;
 }
 
 header {
@@ -27,9 +31,31 @@ h1 {
   text-decoration: underline;
   text-underline-offset: 10px;
   text-decoration-thickness: 5px;
-  margin: 0;
 
   font-size: 500%;
+  width: fit-content;
+}
+
+header h1 {
+  overflow: hidden;
+  padding: 0 .25em 0 .4em;
+  border-right: .15em solid white;
+  white-space: nowrap;
+  margin: 0 auto;
+
+  animation:
+    typing 1s steps(20, end),
+    blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 40% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: white; }
 }
 
 header h4 {
@@ -90,9 +116,9 @@ nav {
   position: fixed;
 
   top: 475px;
-  right: 15px;
+  right: 1em;
 
-  font-size: 150%;
+  font-size: 175%;
 
   display: flex;
   flex-direction: column;
@@ -259,7 +285,7 @@ li {
   flex-direction: column;
   gap: 3em;
 
-  bottom: 400px;
+  margin-bottom: 400px;
 
   position: relative;
   width: 70%;
@@ -420,9 +446,15 @@ li {
   position: fixed;
   top: 0;
   left: 0;
-
-  /* width: 100%; */
   height: 100vh;
+  width: 100vw;
+
+  object-fit: cover;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  
   opacity: 0.2;
 
   animation: fade-in-out linear;
@@ -471,4 +503,65 @@ footer a {
 
 .footer-flex label {
   cursor: pointer;
+}
+
+@media (max-width: 1300px) {
+  h1 {
+    font-size: 400%;
+  }
+
+  .self-photo {
+    width: 300px;
+  }
+
+  .subheading {
+    font-size: 2em;
+  }
+
+  .degree, .certificate, .past-work {
+    font-size: .8em;
+  }
+
+  .section-two {
+    gap: 30px;
+    animation-range-end: 500px;
+  }
+
+  .section-three {
+    animation-range-end: 500px;
+  }
+
+  .section-four {
+    animation-range-end: 500px;
+  }
+
+  .section-five {
+    animation-range-end: 500px;
+  }
+
+  ul li {
+    font-size: 1em;
+  }
+  
+}
+
+@media (max-width: 900px) {
+  .self-photo {
+    width: 200px;
+  }
+
+  h1 {
+    font-size: 300%;
+  }
+
+  header h4 {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 600px) {
+  .scrolling-background {
+    width: 100%;
+    height: 100%;
+  }
 }

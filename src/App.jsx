@@ -18,11 +18,6 @@ function App() {
   // Contact
   // Footer
 
-  const handleChange = event => {
-    setMessage(event.target.value)
-  }
-  
-
   useEffect(() => {
     const height = window.innerHeight;
 
@@ -114,12 +109,12 @@ function App() {
   return (
     <>
       <img className="scrolling-background" src={bgImg}></img>
-      <header>
+      <header id="heade">
         <h1 id="name">Owen Richards</h1>
         <h4 id="port-text">Software Engineer&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;Full Stack&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;Cloud&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;AI Development</h4>
       </header>
       <main>
-        <section className="section-two">
+        <section className="section-two" id="section-two">
           <img className="self-photo" src={selfImg} alt="photo of Owen Richards"></img>
           <div className="about">
             <section className="subheading-flex-1">
@@ -137,7 +132,7 @@ function App() {
           </div>
         </section>
 
-        <section className="section-three">
+        <section className="section-three" id="section-three">
           <section className="subheading-flex">
             <ion-icon name="construct-outline" className="subheading-icon"></ion-icon>
             <h2 className="subheading">Programming Languages</h2>  
@@ -199,7 +194,7 @@ function App() {
           <h4>Since graduating, I've spent my time practicing and researching new languages such as Go and XML. I've also taught myself several other languages during my senior capstone project, such as GDScript and C#.</h4>
         </section>
         
-        <section className="section-four">
+        <section className="section-four"  id="section-four">
           <section className="subheading-flex">
             <ion-icon name="server-outline" className="subheading-icon"></ion-icon>
             <h2 className="subheading">Public Repositories</h2>
@@ -226,7 +221,7 @@ function App() {
           </div>
         </section>
 
-        <section className="section-five">
+        <section className="section-five" id="section-five">
           <section className="subheading-flex">
             <ion-icon name="mail-outline" className="subheading-icon"></ion-icon>
             <h2 className="subheading">Contact Me</h2>
@@ -279,7 +274,7 @@ function App() {
           <label htmlFor='google-sites'>Google Sites</label>
           <ion-icon name="newspaper-outline" id="google-sites"></ion-icon>
         </a>
-        <a className="footer-flex" href="https://www.linkedin.com/in/owen-richards-9a4a94207/" target="_blank" rel="noopener noreferrer">
+        <a className="footer-flex" href="https://www.linkedin.com/in/orichards928/" target="_blank" rel="noopener noreferrer">
           <label htmlFor='linkedin'>LinkedIn</label>
           <ion-icon name="logo-linkedin" id="linkedin"></ion-icon>
         </a>
