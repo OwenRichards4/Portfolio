@@ -274,7 +274,7 @@ function App() {
           <label htmlFor='google-sites'>Google Sites</label>
           <ion-icon name="newspaper-outline" id="google-sites"></ion-icon>
         </a>
-        <a className="footer-flex" href="https://www.linkedin.com/in/orichards928/" target="_blank" rel="noopener noreferrer">
+        <a className="footer-flex" href="https://www.linkedin.com/in/orichards4/" target="_blank" rel="noopener noreferrer">
           <label htmlFor='linkedin'>LinkedIn</label>
           <ion-icon name="logo-linkedin" id="linkedin"></ion-icon>
         </a>
