@@ -102,8 +102,8 @@ function App() {
     if (moveTo == "header") {window.scroll(0, 0)}
     else if (moveTo == "about-me") {window.scroll(0, 900)}
     else if (moveTo == "past-work") {window.scroll(0, 1900)}
-    else if (moveTo == "repos") {window.scroll(0, 2700)}
-    else {window.scroll(0, 4000)}
+    else if (moveTo == "repos") {window.scroll(0, 3200)}
+    else {window.scroll(0, 5500)}
   }
 
   return (
@@ -111,7 +111,7 @@ function App() {
       <img className="scrolling-background" src={bgImg}></img>
       <header id="heade">
         <h1 id="name">Owen Richards</h1>
-        <h4 id="port-text">Software Engineer&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;Full Stack&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;Cloud&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;AI Development</h4>
+        <h4 id="port-text">Software Engineer&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;Full Stack&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;Cloud&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;AI Development<br></br>Data Analyst&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;Data Scientist</h4>
       </header>
       <main>
         <section className="section-two" id="section-two">
@@ -121,9 +121,11 @@ function App() {
               <ion-icon name="person-outline" className="subheading-icon"></ion-icon>
               <h2 className="subheading">About Me</h2>
             </section>
-            <h4 className="degree">Bachelor's in Computer Science and Applied Engineering</h4>
+            <h4 className="degree">Masters's in Science, Data Analytics</h4>
+            <h4 className="certificate" style={{ marginBottom: '10px' }}>Alvernia University — 2026-2028</h4>
+            <h4 className="degree">Bachelor's in Science, Computer Science and Applied Engineering</h4>
             <h4 className="certificate">Undergraduate Certificate in Software Engineering</h4>
-            <h4 className="certificate">University of Cincinnati - May 2025</h4>
+            <h4 className="certificate">University of Cincinnati — 2020-2025</h4>
             <p className="past-work">
               I'm a recent graduate with four co-op rotations at Siemens Digital Industries Software, where I worked on full-stack development, cloud data management, and data pipeline integrations.
               <br></br><br></br>
