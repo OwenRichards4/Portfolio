@@ -73,10 +73,12 @@ export const skills = [
 ];
 
 export const featuredProject = {
-  name: "Financial Tracker",
-  status: "In Progress",
+  name: "Finance Tracker",
+  status: "Live Demo",
   description:
-    "A personal finance tracking application with user authentication. A public demo with preloaded sample data is coming soon.",
+    "A personal finance and tip-tracking dashboard with take-home estimates, tax projections, and shift analytics. The full app requires sign-in — try the interactive demo with sample data.",
+  demoHref: "https://income-tracker-or.vercel.app/demo",
+  assetKey: "financeTracker",
 };
 
 export const projects = [

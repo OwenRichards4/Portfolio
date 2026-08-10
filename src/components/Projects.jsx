@@ -2,6 +2,7 @@ import liveStreamPlatform from "../assets/live-streaming-platform.webp";
 import databaseSystem from "../assets/client-database.webp";
 import financialDash from "../assets/financial-dashboard.webp";
 import rlStatTracker from "../assets/rocket-league-stats-tracker.webp";
+import financeTracker from "../assets/finance-tracker.webp";
 import { featuredProject, projects } from "../data/content";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
@@ -13,6 +14,7 @@ const ASSETS = {
   databaseSystem,
   financialDash,
   rlStatTracker,
+  financeTracker,
 };
 
 export default function Projects() {
@@ -24,18 +26,33 @@ export default function Projects() {
         </Reveal>
 
         <Reveal className="featured" y={20}>
-          <div className="featured__preview">
-            <ion-icon name="image-outline"></ion-icon>
-            <span>Preview coming soon</span>
-          </div>
-          <div className="featured__info">
-            <span className="featured__label">Featured</span>
-            <div className="featured__title-row">
-              <h3>{featuredProject.name}</h3>
-              <span className="featured__badge">{featuredProject.status}</span>
+          <a
+            href={featuredProject.demoHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="featured__link"
+          >
+            <div className="featured__preview">
+              <img
+                src={ASSETS[featuredProject.assetKey]}
+                alt={`Screenshot of the ${featuredProject.name} dashboard`}
+                loading="lazy"
+                className="featured__image"
+              />
             </div>
-            <p>{featuredProject.description}</p>
-          </div>
+            <div className="featured__info">
+              <span className="featured__label">Featured</span>
+              <div className="featured__title-row">
+                <h3>{featuredProject.name}</h3>
+                <span className="featured__badge">{featuredProject.status}</span>
+              </div>
+              <p>{featuredProject.description}</p>
+              <span className="featured__cta">
+                View Demo
+                <ion-icon name="arrow-forward-outline"></ion-icon>
+              </span>
+            </div>
+          </a>
         </Reveal>
 
         <div className="projects__grid">
