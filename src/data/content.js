@@ -8,7 +8,6 @@ export const profile = {
   ],
   tagline:
     "Recent Computer Science grad building full-stack, cloud, and AI-backed systems.",
-  email: "owencrichards@gmail.com",
 };
 
 export const social = {

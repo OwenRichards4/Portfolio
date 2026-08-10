@@ -87,7 +87,7 @@ export default function Hero() {
           <a href={social.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
             <ion-icon name="logo-linkedin"></ion-icon>
           </a>
-          <a href={`mailto:${profile.email}`} aria-label="Email">
+          <a href="#contact" aria-label="Go to contact form">
             <ion-icon name="mail-outline"></ion-icon>
           </a>
         </Motion.div>
