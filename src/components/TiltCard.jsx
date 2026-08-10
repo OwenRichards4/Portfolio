@@ -9,8 +9,8 @@ export default function TiltCard({ children, className = "" }) {
   const x = useMotionValue(0.5);
   const y = useMotionValue(0.5);
 
-  const rotateX = useSpring(useTransform(y, [0, 1], [2, -2]), SPRING);
-  const rotateY = useSpring(useTransform(x, [0, 1], [-2, 2]), SPRING);
+  const rotateX = useSpring(useTransform(y, [0, 1], [3, -3]), SPRING);
+  const rotateY = useSpring(useTransform(x, [0, 1], [-3, 3]), SPRING);
   const glowX = useTransform(x, [0, 1], ["0%", "100%"]);
   const glowY = useTransform(y, [0, 1], ["0%", "100%"]);
   const glowBackground = useTransform(
