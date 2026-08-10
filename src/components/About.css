@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 300px 1fr;
   gap: 56px;
-  align-items: start;
+  align-items: center;
 }
 
 .about__photo-wrap {
