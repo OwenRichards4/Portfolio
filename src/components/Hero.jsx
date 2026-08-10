@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import { AnimatePresence, motion as Motion } from "framer-motion";
+import { motion as Motion } from "framer-motion";
 import { profile, social } from "../data/content";
+import ScrambleText from "./ScrambleText";
 import "./Hero.css";
 
 export default function Hero() {
@@ -38,18 +39,7 @@ export default function Hero() {
         </Motion.h1>
 
         <div className="hero__role">
-          <AnimatePresence mode="wait">
-            <Motion.span
-              key={profile.roles[roleIndex]}
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              transition={{ duration: 0.35 }}
-              className="hero__role-text"
-            >
-              {profile.roles[roleIndex]}
-            </Motion.span>
-          </AnimatePresence>
+          <ScrambleText text={profile.roles[roleIndex]} className="hero__role-text" />
         </div>
 
         <Motion.p
