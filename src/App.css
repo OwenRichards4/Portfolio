@@ -18,11 +18,14 @@ html, body {
   width: 100%;
   min-height: 100%;
 
+  overflow-x: hidden;
+
   scroll-behavior: smooth;
 }
 
 header {
-  margin-bottom: 1000px;
+  min-height: 100vh;
+  margin-bottom: 100px;
   width: 100%;
 }
 
@@ -79,7 +82,7 @@ main {
 
 .websites-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr));
   grid-auto-flow: row;
 
   justify-content: space-evenly;
@@ -106,6 +109,10 @@ main {
 
 .container:hover {
   background-color: var(--button-gray-hover);
+}
+
+.container h3 {
+  white-space: normal;
 }
 
 img {
@@ -173,7 +180,7 @@ nav ion-icon:first-child:hover {
   
   gap: 50px;
 
-  margin-bottom: 600px;
+  margin-bottom: 280px;
 
   animation: fade-in 1s linear;
   animation-timeline: view();
@@ -217,7 +224,7 @@ nav ion-icon:first-child:hover {
     transparent 100%
   );
 
-  margin-bottom: 600px;
+  margin-bottom: 280px;
 
   animation: fade-in 1s linear;
   animation-timeline: view();
@@ -249,9 +256,7 @@ li {
   width: max-content;
   flex-wrap: nowrap;
 
-  /* animation: scrolling linear; */
-  animation: scrolling linear;
-  animation-timeline: scroll(root);
+  animation: scrolling 22s linear infinite;
 }
 
 .scrolling-text {
@@ -265,7 +270,7 @@ li {
 }
 
 @keyframes scrolling {
-  to { transform: translate(calc(-50% - 0.5rem)); }
+  to { transform: translate(-33.3334%); }
 }
 
 
@@ -287,11 +292,98 @@ li {
   flex-direction: column;
   gap: 3em;
 
-  margin-bottom: 400px;
+  margin-bottom: 220px;
 
   position: relative;
   width: 70%;
   left: 15%;
+}
+
+.section-featured {
+  position: relative;
+  width: 70%;
+  left: 15%;
+
+  margin-bottom: 220px;
+
+  animation: fade-in 1s linear;
+  animation-timeline: view();
+
+  animation-range-start: 0;
+  animation-range-end: 500px;
+}
+
+.featured-card {
+  display: flex;
+  align-items: stretch;
+  gap: 2em;
+
+  margin-top: 1.5em;
+
+  background-color: var(--button-gray);
+  border-radius: 8px;
+  padding: 2em;
+
+  text-align: left;
+}
+
+.featured-preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .5em;
+
+  flex: 1;
+  min-height: 220px;
+
+  border: 2px dashed var(--nav-ion-icon);
+  border-radius: 8px;
+
+  color: var(--nav-ion-icon);
+  font-size: 1.1em;
+}
+
+.featured-preview ion-icon {
+  font-size: 2.5em;
+}
+
+.featured-info {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  gap: 1em;
+}
+
+.featured-info-header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.featured-info-header h3 {
+  margin: 0;
+}
+
+.featured-badge {
+  font-size: .6em;
+  font-weight: bold;
+
+  padding: 4px 12px;
+  border: 1px solid var(--nav-ion-icon);
+  border-radius: 999px;
+
+  color: var(--nav-ion-icon);
+  white-space: nowrap;
+}
+
+.featured-info p {
+  font-size: 1.2em;
+  margin: 0;
 }
 
 
@@ -308,9 +400,9 @@ li {
 
 
 .section-five {
-  width: 600px;
+  width: min(600px, calc(100% - 40px));
   margin: 0 auto;
-  margin-bottom: 250px;
+  margin-bottom: 150px;
 
   animation: fade-in linear;
   animation-timeline: view();
@@ -382,6 +474,7 @@ li {
 .subheading {
   font-size: 3em;
   margin: 0;
+  min-width: 0;
 }
 
 .subheading-icon {
@@ -396,8 +489,9 @@ li {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
 
-  gap: 1.5em;
+  gap: .5em 1.5em;
 }
 
 .subheading-flex-1 {
@@ -527,24 +621,33 @@ footer a {
   .section-two {
     gap: 30px;
     animation-range-end: 500px;
+    margin-bottom: 200px;
   }
 
   .section-three {
     animation-range-end: 500px;
+    margin-bottom: 200px;
   }
 
   .section-four {
     animation-range-end: 500px;
+    margin-bottom: 160px;
+  }
+
+  .section-featured {
+    animation-range-end: 500px;
+    margin-bottom: 160px;
   }
 
   .section-five {
     animation-range-end: 500px;
+    margin-bottom: 120px;
   }
 
   ul li {
     font-size: 1em;
   }
-  
+
 }
 
 @media (max-width: 900px) {
@@ -559,11 +662,44 @@ footer a {
   header h4 {
     font-size: 1em;
   }
+
+  .section-two, .section-three {
+    margin-bottom: 140px;
+  }
+
+  .section-four {
+    margin-bottom: 110px;
+  }
+
+  .section-featured {
+    margin-bottom: 110px;
+  }
+
+  .section-five {
+    margin-bottom: 90px;
+  }
+
+  .subheading {
+    font-size: 1.5em;
+  }
+
+  .subheading-icon {
+    font-size: 1.5em;
+  }
+
+  .featured-card {
+    flex-direction: column;
+    padding: 1.5em;
+  }
 }
 
 @media (max-width: 600px) {
   .scrolling-background {
     width: 100%;
     height: 100%;
+  }
+
+  h1 {
+    font-size: 230%;
   }
 }

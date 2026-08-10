@@ -1,14 +1,13 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import './App.css';
 import selfImg from './assets/self-img.jpg';
 import bgImg from './assets/scrolling-background.jpg';
-import liveStreamPlatform from './assets/live-streaming-platform.png'
-import databaseSystem from './assets/client-database.png'
-import financialDash from './assets/financial-dashboard.png'
-import rlStatTracker from './assets/rocket-league-stats-tracker.png'
+import liveStreamPlatform from './assets/live-streaming-platform.webp'
+import databaseSystem from './assets/client-database.webp'
+import financialDash from './assets/financial-dashboard.webp'
+import rlStatTracker from './assets/rocket-league-stats-tracker.webp'
 
 function App() {
-  const [count, setCount] = useState(0)
   const [formStatus, setFormStatus] = useState("idle");
 
   // MAIN
@@ -29,9 +28,9 @@ function App() {
     ele2.style.top = `${newHeight}px`;
   })
   
-  let navTog = false;
+  const navTog = useRef(false);
   function navToggle() {
-    if (navTog) {
+    if (navTog.current) {
       document.getElementById('header-outline').style.opacity = 0;
       document.getElementById('person-outline').style.opacity = 0;
       document.getElementById('construct-outline').style.opacity = 0;
@@ -64,7 +63,7 @@ function App() {
 
       document.getElementById('nav').style.top = "385px";
     }
-    navTog = !navTog;
+    navTog.current = !navTog.current;
   }
 
   const handleSubmit = async (e) => {
@@ -92,26 +91,31 @@ function App() {
       } else {
         setFormStatus("error");
       }
-    } catch (err) {
+    } catch {
       setFormStatus("error");
     }
   };
 
   
+  const sectionIds = {
+    "header": "heade",
+    "about-me": "section-two",
+    "past-work": "section-three",
+    "repos": "section-four",
+    "contact": "section-five",
+  };
+
   function moveWindow(moveTo) {
-    if (moveTo == "header") {window.scroll(0, 0)}
-    else if (moveTo == "about-me") {window.scroll(0, 900)}
-    else if (moveTo == "past-work") {window.scroll(0, 1900)}
-    else if (moveTo == "repos") {window.scroll(0, 3200)}
-    else {window.scroll(0, 5500)}
+    document.getElementById(sectionIds[moveTo] ?? sectionIds.contact)
+      .scrollIntoView({ behavior: "smooth", block: "start" });
   }
 
   return (
     <>
-      <img className="scrolling-background" src={bgImg}></img>
+      <img className="scrolling-background" src={bgImg} alt="" aria-hidden="true"></img>
       <header id="heade">
         <h1 id="name">Owen Richards</h1>
-        <h4 id="port-text">Software Engineer&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;Full Stack&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;Cloud&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;AI Development<br></br>Data Analyst&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;Data Scientist</h4>
+        <h4 id="port-text">Software Engineer&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;Full Stack&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;Cloud&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;AI&nbsp;Development<br></br>Data Analyst&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;Data Scientist</h4>
       </header>
       <main>
         <section className="section-two" id="section-two">
@@ -195,7 +199,27 @@ function App() {
           </ul>
           <h4>Since graduating, I've spent my time practicing and researching new languages such as Go and XML. I've also taught myself several other languages during my senior capstone project, such as GDScript and C#.</h4>
         </section>
-        
+
+        <section className="section-featured" id="section-featured">
+          <section className="subheading-flex">
+            <ion-icon name="star-outline" className="subheading-icon"></ion-icon>
+            <h2 className="subheading">Featured Project</h2>
+          </section>
+          <div className="featured-card">
+            <div className="featured-preview">
+              <ion-icon name="image-outline"></ion-icon>
+              <span>Preview coming soon</span>
+            </div>
+            <div className="featured-info">
+              <div className="featured-info-header">
+                <h3>Financial Tracker</h3>
+                <span className="featured-badge">In Progress</span>
+              </div>
+              <p>A personal finance tracking application with user authentication. A public demo with preloaded sample data is coming soon.</p>
+            </div>
+          </div>
+        </section>
+
         <section className="section-four"  id="section-four">
           <section className="subheading-flex">
             <ion-icon name="server-outline" className="subheading-icon"></ion-icon>
@@ -204,21 +228,21 @@ function App() {
           <div className="websites-grid">
             <a className="container" href="https://owenrichards4.github.io/Live-Streaming-Platform/" target="_blank" rel="noopener noreferrer">
               <h3>Live Streaming Platform</h3>
-              <img src={liveStreamPlatform}></img>
+              <img src={liveStreamPlatform} alt="Screenshot of the Live Streaming Platform project" loading="lazy"></img>
             </a>
             <a className="container" href="https://github.com/OwenRichards4/Client-Database" target="_blank" rel="noopener noreferrer">
               <h3>Database System</h3>
-              <img src={databaseSystem}></img>
+              <img src={databaseSystem} alt="Screenshot of the Client Database System project" loading="lazy"></img>
             </a>
           </div>
           <div className="websites-grid">
             <a className="container" href="https://owenrichards4.github.io/Financial-Dashboard/" target="_blank" rel="noopener noreferrer">
               <h3>Financial Dashboard</h3>
-              <img src={financialDash}></img>
+              <img src={financialDash} alt="Screenshot of the Financial Dashboard project" loading="lazy"></img>
             </a>
             <a className="container" href="https://owenrichards4.github.io/UI-Project-1/" target="_blank" rel="noopener noreferrer">
               <h3>RL Statistics Tracker</h3>
-              <img src={rlStatTracker}></img>
+              <img src={rlStatTracker} alt="Screenshot of the Rocket League Statistics Tracker project" loading="lazy"></img>
             </a>
           </div>
         </section>
