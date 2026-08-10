@@ -86,7 +86,7 @@ export const skills = [
   },
   {
     label: "Data & Analytics",
-    items: ["SQL", "NoSQL", "Pandas", "NumPy", "Power BI", "JSON", "CSV"],
+    items: ["SQL", "NoSQL", "Pandas", "NumPy", "Power BI", "JSON", "CSV", "R"],
   },
   {
     label: "AI/ML",
