@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { motion as Motion } from "framer-motion";
 import { profile, social } from "../data/content";
 import ScrambleText from "./ScrambleText";
+import ParticleField from "./ParticleField";
 import "./Hero.css";
 
 export default function Hero() {
@@ -16,7 +17,7 @@ export default function Hero() {
 
   return (
     <section className="hero" id="top">
-      <div className="hero__grid" aria-hidden="true"></div>
+      <ParticleField />
       <div className="hero__glow" aria-hidden="true"></div>
 
       <div className="hero__content">
