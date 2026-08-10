@@ -4,13 +4,6 @@ import SectionHeading from "./SectionHeading";
 import "./Section.css";
 import "./Skills.css";
 
-const GROUPS = [
-  { key: "core", label: "Most Confident", items: skills.core },
-  { key: "familiar", label: "Also Comfortable With", items: skills.familiar },
-  { key: "other", label: "Used Professionally / Academically", items: skills.other },
-  { key: "learning", label: "Currently Learning", items: skills.learning },
-];
-
 export default function Skills() {
   return (
     <section className="section skills" id="skills">
@@ -19,13 +12,13 @@ export default function Skills() {
           <SectionHeading
             index="03"
             title="Skills"
-            kicker="I've taken on numerous projects and classes that have required me to learn or increase my knowledge of new programming languages."
+            kicker="Technologies I've used across coursework, co-ops, and personal projects."
           />
         </Reveal>
 
         <div className="skills__groups">
-          {GROUPS.map((group, i) => (
-            <Reveal className="skills__group" delay={i * 0.08} key={group.key}>
+          {skills.map((group, i) => (
+            <Reveal className="skills__group" delay={i * 0.08} key={group.label}>
               <p className="skills__group-label">{group.label}</p>
               <div className="skills__tags">
                 {group.items.map((item) => (

@@ -49,12 +49,28 @@ export const experience = [
   },
 ];
 
-export const skills = {
-  core: ["Python", "HTML", "CSS", "JavaScript"],
-  familiar: ["TypeScript", "Svelte", "C++", "VBA"],
-  learning: ["Go", "XML", "GDScript", "C#"],
-  other: ["C", "SQL", "NoSQL", "Java"],
-};
+export const skills = [
+  {
+    label: "Programming",
+    items: ["Python", "JavaScript", "TypeScript", "Java", "C++", "HTML/CSS", "VBA"],
+  },
+  {
+    label: "Cloud & Backend",
+    items: ["AWS (Lambda, DynamoDB, S3, IAM, API Gateway)", "REST APIs", "Linux", "CI/CD"],
+  },
+  {
+    label: "Data & Analytics",
+    items: ["SQL", "NoSQL", "Pandas", "NumPy", "Power BI", "JSON", "CSV"],
+  },
+  {
+    label: "AI/ML",
+    items: ["ChatGPT", "Claude", "AWS Bedrock", "Amazon Titan", "LLM Evaluation", "Model Fine-Tuning"],
+  },
+  {
+    label: "Frameworks & Tools",
+    items: ["GitHub", "Node.js", "React", "Angular", "Svelte"],
+  },
+];
 
 export const featuredProject = {
   name: "Financial Tracker",
