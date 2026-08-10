@@ -1,0 +1,143 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+
+  background: transparent;
+  border-bottom: 1px solid transparent;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.nav--scrolled {
+  background: rgba(8, 8, 10, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav__inner {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 68px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.nav__mark {
+  font-family: var(--font-mono);
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--text);
+  text-decoration: none;
+  letter-spacing: -0.02em;
+}
+
+.nav__mark-accent {
+  color: var(--accent);
+}
+
+.nav__links {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+
+  margin-right: auto;
+  margin-left: 3em;
+}
+
+.nav__link {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.nav__link:hover {
+  color: var(--text);
+}
+
+.nav__actions {
+  display: flex;
+  align-items: center;
+  gap: 1.1em;
+}
+
+.nav__icon-link {
+  display: flex;
+  color: var(--text-muted);
+  font-size: 1.15rem;
+  transition: color 0.2s ease;
+}
+
+.nav__icon-link:hover {
+  color: var(--text);
+}
+
+.nav__cta {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text);
+  text-decoration: none;
+
+  padding: 8px 16px;
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.nav__cta:hover {
+  border-color: var(--accent);
+  background: var(--accent-dim);
+}
+
+.nav__toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  background: none;
+  border: none;
+  color: var(--text);
+  font-size: 1.6rem;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.nav__mobile {
+  display: flex;
+  flex-direction: column;
+
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  padding: 8px 24px 20px;
+}
+
+.nav__mobile-link {
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+  text-decoration: none;
+  font-size: 1.05rem;
+}
+
+.nav__mobile-link:last-child {
+  border-bottom: none;
+}
+
+@media (max-width: 860px) {
+  .nav__links,
+  .nav__actions {
+    display: none;
+  }
+
+  .nav__toggle {
+    display: flex;
+  }
+}
