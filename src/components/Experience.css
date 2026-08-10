@@ -59,16 +59,44 @@
   color: var(--text-faint);
 }
 
-.experience__org {
+.experience__note {
   color: var(--accent-text);
-  font-size: 1rem;
-  margin-bottom: 16px;
+  font-size: 0.98rem;
+  margin-bottom: 28px;
 }
 
-.experience__points {
+.experience__rotations {
   display: flex;
   flex-direction: column;
+  gap: 24px;
+
+  border-left: 2px solid var(--border);
+  padding-left: 24px;
+}
+
+.rotation__header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
   gap: 10px;
+  margin-bottom: 10px;
+}
+
+.rotation__header h4 {
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.rotation__period {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-faint);
+}
+
+.rotation__points {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 
   margin: 0;
   padding-left: 20px;
@@ -76,6 +104,6 @@
   color: var(--text-muted);
 }
 
-.experience__points li {
-  font-size: 1rem;
+.rotation__points li {
+  font-size: 0.96rem;
 }

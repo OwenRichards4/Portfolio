@@ -37,14 +37,40 @@ export const about = [
 
 export const experience = [
   {
-    role: "Co-op (4 rotations)",
-    org: "Siemens Digital Industries Software",
-    period: "During B.S. at University of Cincinnati",
-    points: [
-      "Built and maintained AWS-backed services spanning Lambda, DynamoDB, S3, IAM, and API Gateway.",
-      "Developed company-standard internal websites and applications to enhance worker productivity.",
-      "Worked on full-stack development, cloud data management, and data pipeline integrations.",
-      "Researched deployment and fine-tuning approaches for multiple AI models.",
+    company: "Siemens Digital Industries Software",
+    period: "May 2022 – Aug 2024",
+    note: "Completed four co-op rotations integrated into the academic calendar.",
+    rotations: [
+      {
+        title: "Data Engineering Intern",
+        period: "May 2024 – Aug 2024",
+        points: [
+          "Implemented an S3–Lambda–Power BI workflow to automatically process uploaded project data and publish summarized reports via IAM-secured connections.",
+        ],
+      },
+      {
+        title: "AI/ML Engineering Intern",
+        period: "Aug 2023 – Dec 2023",
+        points: [
+          "Evaluated LLMs on AWS Bedrock and fine-tuned Amazon Titan for internal applications.",
+          "Designed an AI chat interface using HTML, CSS, and JavaScript to interact with Llama 2 through API calls, enabling simplified integration of additional models.",
+        ],
+      },
+      {
+        title: "Data/Software Engineering Intern",
+        period: "Jan 2023 – May 2023",
+        points: [
+          "Developed an AWS Lambda pipeline that aggregated EC2 and RDS budget data from nine projects and pushed structured data to DynamoDB, improving data accessibility and cost tracking.",
+          "Created a financial dashboard using HTML, CSS, and JavaScript to visualize JSON-structured budgeting data, saving the company tens of thousands in monthly expenses.",
+        ],
+      },
+      {
+        title: "Technical Marketing Intern",
+        period: "May 2022 – Aug 2022",
+        points: [
+          "Programmed 13 macros in PowerPoint to standardize presentations to match Siemens' branding guidelines.",
+        ],
+      },
     ],
   },
 ];
