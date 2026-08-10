@@ -109,11 +109,6 @@ export const featuredProject = {
 
 export const projects = [
   {
-    name: "Live Streaming Platform",
-    href: "https://owenrichards4.github.io/Live-Streaming-Platform/",
-    assetKey: "liveStreamPlatform",
-  },
-  {
     name: "Database System",
     href: "https://github.com/OwenRichards4/Client-Database",
     assetKey: "databaseSystem",
@@ -122,6 +117,11 @@ export const projects = [
     name: "Financial Dashboard",
     href: "https://owenrichards4.github.io/Financial-Dashboard/",
     assetKey: "financialDash",
+  },
+  {
+    name: "Live Streaming Platform",
+    href: "https://owenrichards4.github.io/Live-Streaming-Platform/",
+    assetKey: "liveStreamPlatform",
   },
   {
     name: "RL Statistics Tracker",
