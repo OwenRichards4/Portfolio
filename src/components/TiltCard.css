@@ -1,0 +1,29 @@
+.tilt-card {
+  position: relative;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.tilt-card__glow {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.tilt-card:hover .tilt-card__glow {
+  opacity: 1;
+}
+
+@media (hover: none) {
+  .tilt-card {
+    transform: none !important;
+  }
+
+  .tilt-card__glow {
+    display: none;
+  }
+}

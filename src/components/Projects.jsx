@@ -6,6 +6,7 @@ import financeTracker from "../assets/finance-tracker.webp";
 import { featuredProject, projects } from "../data/content";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
+import TiltCard from "./TiltCard";
 import "./Section.css";
 import "./Projects.css";
 
@@ -57,31 +58,28 @@ export default function Projects() {
 
         <div className="projects__grid">
           {projects.map((project, i) => (
-            <Reveal
-              className="project-card"
-              delay={i * 0.06}
-              y={18}
-              key={project.name}
-            >
-              <a
-                href={project.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="project-card__link"
-              >
-                <div className="project-card__image-wrap">
-                  <img
-                    src={ASSETS[project.assetKey]}
-                    alt={`Screenshot of the ${project.name} project`}
-                    loading="lazy"
-                    className="project-card__image"
-                  />
-                </div>
-                <div className="project-card__footer">
-                  <h3>{project.name}</h3>
-                  <ion-icon name="arrow-forward-outline"></ion-icon>
-                </div>
-              </a>
+            <Reveal delay={i * 0.06} y={18} key={project.name}>
+              <TiltCard className="project-card">
+                <a
+                  href={project.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="project-card__link"
+                >
+                  <div className="project-card__image-wrap">
+                    <img
+                      src={ASSETS[project.assetKey]}
+                      alt={`Screenshot of the ${project.name} project`}
+                      loading="lazy"
+                      className="project-card__image"
+                    />
+                  </div>
+                  <div className="project-card__footer">
+                    <h3>{project.name}</h3>
+                    <ion-icon name="arrow-forward-outline"></ion-icon>
+                  </div>
+                </a>
+              </TiltCard>
             </Reveal>
           ))}
         </div>

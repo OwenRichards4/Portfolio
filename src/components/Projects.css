@@ -122,12 +122,11 @@
   border-radius: 14px;
   overflow: hidden;
 
-  transition: border-color 0.2s ease, transform 0.2s ease;
+  transition: border-color 0.2s ease;
 }
 
 .project-card:hover {
   border-color: var(--border-strong);
-  transform: translateY(-4px);
 }
 
 .project-card__link {
