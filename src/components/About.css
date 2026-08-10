@@ -13,7 +13,7 @@
 .about__photo {
   width: 100%;
   border-radius: 14px;
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-strong);
 }
 
 .about__body {
