@@ -68,6 +68,43 @@
   gap: 1.1em;
 }
 
+.nav__search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  font-family: inherit;
+  font-size: 0.85rem;
+  color: var(--text-faint);
+
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 7px 10px 7px 12px;
+
+  cursor: pointer;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.nav__search:hover {
+  border-color: var(--border-strong);
+  color: var(--text-muted);
+}
+
+.nav__search ion-icon {
+  font-size: 1rem;
+}
+
+.nav__search kbd {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-faint);
+
+  padding: 2px 6px;
+  border: 1px solid var(--border-strong);
+  border-radius: 5px;
+}
+
 .nav__icon-link {
   display: flex;
   color: var(--text-muted);
@@ -120,15 +157,36 @@
 }
 
 .nav__mobile-link {
-  padding: 14px 0;
+  display: block;
+  width: 100%;
+
+  background: none;
+  border: none;
   border-bottom: 1px solid var(--border);
+  padding: 14px 0;
+
+  font-family: inherit;
   color: var(--text);
   text-decoration: none;
+  text-align: left;
   font-size: 1.05rem;
+
+  cursor: pointer;
 }
 
 .nav__mobile-link:last-child {
   border-bottom: none;
+}
+
+.nav__mobile-search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-faint);
+}
+
+.nav__mobile-search ion-icon {
+  font-size: 1.1rem;
 }
 
 @media (max-width: 860px) {

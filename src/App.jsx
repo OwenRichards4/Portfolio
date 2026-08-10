@@ -6,10 +6,12 @@ import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import CommandPalette from "./components/CommandPalette";
 
 function App() {
   return (
     <>
+      <CommandPalette />
       <Nav />
       <main>
         <Hero />

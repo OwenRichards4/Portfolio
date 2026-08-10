@@ -10,6 +10,9 @@ const LINKS = [
   { href: "#contact", label: "Contact" },
 ];
 
+const isMac =
+  typeof navigator !== "undefined" && /Mac|iPhone|iPod|iPad/.test(navigator.platform ?? navigator.userAgent);
+
 export default function Nav() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -37,6 +40,16 @@ export default function Nav() {
         </nav>
 
         <div className="nav__actions">
+          <button
+            className="nav__search"
+            onClick={() => window.dispatchEvent(new Event("cmdk:open"))}
+            aria-label="Open command palette"
+          >
+            <ion-icon name="search-outline"></ion-icon>
+            <span>Search</span>
+            <kbd>{isMac ? "⌘" : "Ctrl"}K</kbd>
+          </button>
+
           <a
             className="nav__icon-link"
             href={social.github}
@@ -72,6 +85,16 @@ export default function Nav() {
 
       {open && (
         <nav className="nav__mobile">
+          <button
+            className="nav__mobile-link nav__mobile-search"
+            onClick={() => {
+              setOpen(false);
+              window.dispatchEvent(new Event("cmdk:open"));
+            }}
+          >
+            <ion-icon name="search-outline"></ion-icon>
+            Search
+          </button>
           {LINKS.map((link) => (
             <a
               key={link.href}
