@@ -45,30 +45,68 @@ export const experience = [
         title: "Data Engineering Intern",
         period: "May 2024 – Aug 2024",
         points: [
-          "Implemented an S3–Lambda–Power BI workflow to automatically process uploaded project data and publish summarized reports via IAM-secured connections.",
+          {
+            label: "Amazon Web Services",
+            text: "CI/CD pipeline through S3, Lambda, and DynamoDB to pull, sort, and alter data later pushed to Power BI using IAM roles and API Gateways.",
+          },
+          {
+            label: "Camtasia",
+            text: "Video creation using AI tools. Competition held with all the co-op students to improve current AI training systems.",
+          },
+          {
+            label: "Mendix",
+            text: "Contributed to software updates to the Siemens Xplore application.",
+          },
         ],
       },
       {
-        title: "AI/ML Engineering Intern",
+        title: "AI Research and Integration Intern",
         period: "Aug 2023 – Dec 2023",
         points: [
-          "Evaluated LLMs on AWS Bedrock and fine-tuned Amazon Titan for internal applications.",
-          "Designed an AI chat interface using HTML, CSS, and JavaScript to interact with Llama 2 through API calls, enabling simplified integration of additional models.",
+          {
+            label: "Work Laptop AI Integration",
+            text: "Researched and developed ways to use AI locally on work laptops with low RAM.",
+          },
+          {
+            label: "Siemens LLM Chat Website",
+            text: "Created an AI chat website using HTML, JavaScript, and CSS with API calls to Llama 2.",
+          },
+          {
+            label: "AI Prompting",
+            text: "Recorded the responses and differences across the 13 models provided on AWS.",
+          },
+          {
+            label: "AI Fine-Tuning",
+            text: "Researched and briefly fine-tuned AWS Titan on release.",
+          },
         ],
       },
       {
         title: "Data/Software Engineering Intern",
         period: "Jan 2023 – May 2023",
         points: [
-          "Developed an AWS Lambda pipeline that aggregated EC2 and RDS budget data from nine projects and pushed structured data to DynamoDB, improving data accessibility and cost tracking.",
-          "Created a financial dashboard using HTML, CSS, and JavaScript to visualize JSON-structured budgeting data, saving the company tens of thousands in monthly expenses.",
+          {
+            label: "AWS Pipeline",
+            text: "Pulled spending and instance data from 13 AWS projects into one centralized project using API Gateways, with sorting and filtering in Lambda pushed to DynamoDB — saved the company $20,000 in unneeded spending.",
+          },
+          {
+            label: "AWS Financial Dashboard",
+            text: "Created my first website (HTML, JavaScript, CSS) to display the DynamoDB table, later saving the company tens of thousands in unneeded spending.",
+          },
         ],
       },
       {
         title: "Technical Marketing Intern",
         period: "May 2022 – Aug 2022",
         points: [
-          "Programmed 13 macros in PowerPoint to standardize presentations to match Siemens' branding guidelines.",
+          {
+            label: "Siemens Presentation Assistant",
+            text: "Programmed 11 macros in PowerPoint using Visual Basic for Applications to automate company-standard formatting, then built a PowerPoint extension with its own ribbon (XML) to surface them.",
+          },
+          {
+            label: "Excel Email Automation",
+            text: "Built a macro for a 10,000+ row Excel file of employee project assignments that generates a ready-to-send Outlook email for each person on a given project.",
+          },
         ],
       },
     ],

@@ -107,3 +107,8 @@
 .rotation__points li {
   font-size: 0.96rem;
 }
+
+.rotation__points li strong {
+  color: var(--text);
+  font-weight: 600;
+}

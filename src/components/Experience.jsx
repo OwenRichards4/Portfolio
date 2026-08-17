@@ -35,7 +35,9 @@ export default function Experience() {
                       </div>
                       <ul className="rotation__points">
                         {rotation.points.map((point) => (
-                          <li key={point.slice(0, 24)}>{point}</li>
+                          <li key={point.label}>
+                            <strong>{point.label}:</strong> {point.text}
+                          </li>
                         ))}
                       </ul>
                     </div>
